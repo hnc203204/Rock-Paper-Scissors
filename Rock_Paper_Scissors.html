@@ -11,6 +11,11 @@
     td {
       border: 1px solid black;
     }
+
+    .tab {
+            display: inline-block;
+            margin-left: 20px;
+        }
   </style>
 </head>
 
@@ -44,16 +49,16 @@
   <section class="game_description">
 
       <h2>Phát biểu bài toán:</h2>
-      <p>Một trò chơi kinh điển và phổ biến là oẳn tù tì (Rock-Paper-Scissors), tuy đơn giản nhưng cũng rất hấp dẫn.</p>
-      <p>Chúng tôi sẽ phát triển lại tựa game bao gồm nhiều lượt đi (throw) với số lượt đi là một tham số đầu vào, trong
+      <p><span class="tab"></span>Một trò chơi kinh điển và phổ biến là oẳn tù tì (Rock-Paper-Scissors), tuy đơn giản nhưng cũng rất hấp dẫn.</p>
+      <p><span class="tab"></span>Chúng tôi sẽ phát triển lại tựa game bao gồm nhiều lượt đi (throw) với số lượt đi là một tham số đầu vào, trong
         đó với mỗi lần đi người chơi và máy tính sẽ lần lượt quyết định một trong ba sự lựa chọn: đấm (rock), lá
         (paper), kéo (scissor).</p>
-      <p>Để đảm bảo công bằng, máy tính sẽ không dựa trên quyết định người chơi vừa chọn mà sẽ quyết định dựa trên những
+      <p><span class="tab"></span>Để đảm bảo công bằng, máy tính sẽ không dựa trên quyết định người chơi vừa chọn mà sẽ quyết định dựa trên những
         quyết định trước đó của người chơi. Điều này sẽ tạo ra được trải nghiệm giải trí hài lòng đối với người chơi,
         đồng thời tăng thêm tính tương tác thú vị của trò chơi.</p>
-      <p>Bên cạnh đó còn có các chức năng khác hỗ trợ người chơi như hiện điểm hiện tại và yêu cầu hiển thị trợ giúp.
+      <p><span class="tab"></span>Bên cạnh đó còn có các chức năng khác hỗ trợ người chơi như hiện điểm hiện tại và yêu cầu hiển thị trợ giúp.
       </p>
-      <p>Khi kết thúc mỗi ván, ta sẽ có được các kết quả đầu ra được hiển thị như ai là người thắng (hoặc hòa), số lần
+      <p><span class="tab"></span>Khi kết thúc mỗi ván, ta sẽ có được các kết quả đầu ra được hiển thị như ai là người thắng (hoặc hòa), số lần
         mà các đối tượng thắng, thua và hòa.</p>
 
   </section>
@@ -71,7 +76,22 @@
     <div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/9c7e1f34-3a82-4d75-83ae-010b07f44683" id="auUgJ6Mds9ds"></iframe></div>
     <div class="description">
       <h3>Chọn Kéo, Búa, Bao</h3>
-      <p style="tab-size: 8">Người   chơi sẽ chọn 3 phím kéo, búa, bao được hiển thị trên giao diện.</p>
+      <p><span class="tab"></span>Người chơi sẽ chọn 3 phím kéo, búa, bao được hiển thị trên giao diện.</p>
+      <p><span class="tab"></span>Sau khi chọn hệ thống sẽ ghi nhận và đưa đến bước so sánh.</span></p>
+      <h3>So sánh</h3>
+      <p><span class="tab"</span>Máy sẽ random và so sánh dựa trên logic của trò chơi.</p>
+        <ul id="random-comparison">
+          <li>Kéo thắng Búa.</li>
+          <li>Búa thắng Bao.</li>
+          <li>Bao thắng Kéo.</li>
+        </ul>
+      <h3>Đưa ra kết quả</h3>
+      <p><span class="tab"></span>Sau khi so sánh hiện kết quả cho người chơi.</p>
+      <ul>
+        <li>Win.</li>
+        <li>Lose.</li>
+        <li>Tie.</li>
+      </ul>
 
     </div>
   </section>
