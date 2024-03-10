@@ -88,65 +88,168 @@
   <section class="game-usecase">
     <h2>Use Case</h2>
     <div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/9c7e1f34-3a82-4d75-83ae-010b07f44683" id="auUgJ6Mds9ds"></iframe></div>
-    <div class="description">
-      <h2>Use Case: Chơi trò chơi Rock-Paper-Scissors</h2>
+    <div class="use-case-1">
+      <h2>Use Case: Play</h2>
 
-<h3>Actors:</h3>
-<ul>
-    <li>Người chơi</li>
-    <li>Hệ thống trò chơi Rock-Paper-Scissors</li>
-</ul>
+      <h3>Actors:</h3>
+      <ul>
+          <li>Người chơi</li>
+          <li>Hệ thống trò chơi Rock-Paper-Scissors</li>
+      </ul>
 
-<h3>Precondition:</h3>
-<ul>
-    <li>Trò chơi đã được khởi động và sẵn sàng để chơi.</li>
-    <li>Người chơi đã được hiển thị giao diện để lựa chọn lượt đi.</li>
-</ul>
+      <h3>Precondition:</h3>
+      <ul>
+          <li>Trò chơi đã được khởi động và sẵn sàng để chơi.</li>
+          <li>Người chơi đã được hiển thị giao diện để lựa chọn lượt đi.</li>
+      </ul>
 
-<h3>Trigger:</h3>
-<p>Người chơi bắt đầu lượt đi bằng cách chọn một trong ba tùy chọn: Kéo, Búa, Bao.</p>
+      <h3>Trigger:</h3>
+      <p>Người chơi bắt đầu lượt đi bằng cách chọn một trong ba tùy chọn: Kéo, Búa, Bao.</p>
 
-<h3>Primary Sequence:</h3>
-<ol>
-    <li>Người chơi chọn một trong ba tùy chọn: Kéo, Búa, Bao.</li>
-    <li>Hệ thống ghi nhận lựa chọn của người chơi.</li>
-    <li>Hệ thống chọn một trong ba tùy chọn: Kéo, Búa, Bao một cách ngẫu nhiên.</li>
-    <li>Hệ thống so sánh lựa chọn của người chơi với lựa chọn của hệ thống để xác định kết quả (thắng, thua, hòa).</li>
-    <li>Hệ thống hiển thị kết quả cho người chơi.</li>
-    <li>Hệ thống cập nhật điểm số cho người chơi nếu có.</li>
-</ol>
+      <h3>Primary Sequence:</h3>
+      <ol>
+          <li>Người chơi chọn một trong ba tùy chọn: Kéo, Búa, Bao.</li>
+          <li>Hệ thống ghi nhận lựa chọn của người chơi.</li>
+          <li>Hệ thống chọn một trong ba tùy chọn: Kéo, Búa, Bao một cách ngẫu nhiên.</li>
+          <li>Hệ thống so sánh lựa chọn của người chơi với lựa chọn của hệ thống để xác định kết quả (thắng, thua, hòa).</li>
+          <li>Hệ thống hiển thị kết quả cho người chơi.</li>
+          <li>Hệ thống cập nhật điểm số cho người chơi nếu có.</li>
+      </ol>
 
-<h3>Postcondition:</h3>
-<ul>
-    <li>Kết quả của lượt đi được hiển thị.</li>
-    <li>Điểm số của người chơi được cập nhật.</li>
-</ul>
+      <h3>Postcondition:</h3>
+      <ul>
+          <li>Kết quả của lượt đi được hiển thị.</li>
+          <li>Điểm số của người chơi được cập nhật.</li>
+      </ul>
 
-<h3>Alternate Sequence:</h3>
-<ol>
-    <li>Nếu người chơi chọn khởi động lại trò chơi:</li>
-    <ul>
-        <li>Hệ thống hiển thị một hộp thoại xác nhận.</li>
+      <h3>Alternate Sequence:</h3>
+      <ol>
+          <li>Nếu người chơi chọn khởi động lại trò chơi:</li>
+          <ul>
+              <li>Hệ thống hiển thị một hộp thoại xác nhận.</li>
+              <li>Người chơi chọn "Đồng ý" để khởi động lại trò chơi.</li>
+              <li>Hệ thống xóa điểm số hiện tại và chuẩn bị trò chơi mới.</li>
+          </ul>
+      </ol>
+
+      <h3>Nonfunctional Requirement:</h3>
+      <ul>
+          <li>Hệ thống phản hồi ngay lập tức trong vòng 3 giây sau khi người chơi chọn lựa.</li>
+          <li>Giao diện phải dễ sử dụng, các tùy chọn phải rõ ràng và dễ tìm kiếm.</li>
+          <li>Không lưu trữ dữ liệu lựa chọn của người chơi giữa các lượt chơi.</li>
+          <li>Bộ đếm điểm phải chính xác.</li>
+          <li>Có tính năng lưu và thoát trò chơi để người chơi có thể tiếp tục từ nơi họ dừng lại.</li>
+      </ul>
+
+      <h3>Glossary:</h3>
+      <ul>
+          <li>Trò chơi Rock-Paper-Scissors: Một trò chơi cổ điển trong đó người chơi lựa chọn một trong ba tùy chọn: Kéo, Búa, Bao, và thắng dựa trên luật: Kéo thắng Búa, Búa thắng Bao, Bao thắng Kéo.</li>
+          <li>Lượt đi: Một vòng chơi trong trò chơi Rock-Paper-Scissors, trong đó người chơi và hệ thống đưa ra lựa chọn của mình.</li>
+          <li>Điểm số: Số lần người chơi thắng trong trò chơi.</li>
+      </ul>
+      </div>
+    
+    <div class="use-case-2">
+      <h2>Use Case: Restart game</h2>
+      <h3>Actors:</h3>
+      <ul>
+        <li>Người chơi</li>
+        <li>Hệ thống trò chơi Rock-Paper-Scissors</li>
+      </ul>
+
+      <h3>Precondition:</h3>
+      <ul>
+        <li>Trò chơi đang chạy và hiển thị giao diện chơi.</li>
+        <li>Người chơi đã hoàn thành ít nhất một lượt chơi.</li>
+      </ul>
+
+      <h3>Trigger:</h3>
+      <p>Người chơi chọn tùy chọn "Restart" trên giao diện trò chơi.</p>
+
+      <h3>Primary Sequence:</h3>
+      <ol>
+        <li>Người chơi chọn tùy chọn "Restart" trên giao diện trò chơi.</li>
+        <li>Hệ thống hiển thị một hộp thoại xác nhận với hai lựa chọn: "Trở về trò chơi" và "Đồng ý".</li>
         <li>Người chơi chọn "Đồng ý" để khởi động lại trò chơi.</li>
         <li>Hệ thống xóa điểm số hiện tại và chuẩn bị trò chơi mới.</li>
-    </ul>
-</ol>
+        <li>Hệ thống hiển thị lại giao diện chơi để người chơi bắt đầu một vòng chơi mới.</li>
+      </ol>
 
-<h3>Nonfunctional Requirement:</h3>
-<ul>
-    <li>Hệ thống phản hồi ngay lập tức trong vòng 3 giây sau khi người chơi chọn lựa.</li>
-    <li>Giao diện phải dễ sử dụng, các tùy chọn phải rõ ràng và dễ tìm kiếm.</li>
-    <li>Không lưu trữ dữ liệu lựa chọn của người chơi giữa các lượt chơi.</li>
-    <li>Bộ đếm điểm phải chính xác.</li>
-    <li>Có tính năng lưu và thoát trò chơi để người chơi có thể tiếp tục từ nơi họ dừng lại.</li>
-</ul>
+      <h3>Postcondition:</h3>
+      <ul>
+        <li>Trò chơi được khởi động lại và chuẩn bị cho lượt chơi tiếp theo.</li>
+        <li>Điểm số của người chơi được đặt lại về 0.</li>
+      </ul>
 
-<h3>Glossary:</h3>
-<ul>
-    <li>Trò chơi Rock-Paper-Scissors: Một trò chơi cổ điển trong đó người chơi lựa chọn một trong ba tùy chọn: Kéo, Búa, Bao, và thắng dựa trên luật: Kéo thắng Búa, Búa thắng Bao, Bao thắng Kéo.</li>
-    <li>Lượt đi: Một vòng chơi trong trò chơi Rock-Paper-Scissors, trong đó người chơi và hệ thống đưa ra lựa chọn của mình.</li>
-    <li>Điểm số: Số lần người chơi thắng trong trò chơi.</li>
-</ul>
+      <h3>Alternate Sequence:</h3>
+      <p>Nếu người chơi chọn "Trở về trò chơi" trong hộp thoại xác nhận:</p>
+      <ul>
+        <li>Hệ thống đóng hộp thoại và tiếp tục với trò chơi hiện tại, không thực hiện việc khởi động lại.</li>
+      </ul>
+
+      <h3>Nonfunctional Requirement:</h3>
+      <ul>
+        <li>Giao diện phải phản hồi ngay lập tức khi người chơi chọn tùy chọn "Restart".</li>
+        <li>Hộp thoại xác nhận phải hiển thị rõ ràng và dễ dàng cho người chơi chọn lựa.</li>
+      </ul>
+
+      <h3>Glossary:</h3>
+      <ul>
+        <li>Trò chơi Rock-Paper-Scissors: Một trò chơi cổ điển trong đó người chơi lựa chọn một trong ba tùy chọn: Kéo, Búa, Bao, và thắng dựa trên luật: Kéo thắng Búa, Búa thắng Bao, Bao thắng Kéo.</li>
+        <li>Điểm số: Số lần người chơi thắng trong trò chơi.</li>
+      </ul>
+    </div>
+    <div class="use-case-3">
+      <h2>Use Case: Save & Exit</h2>
+
+      <h3>Actors:</h3>
+      <ul>
+        <li>Người chơi</li>
+        <li>Hệ thống trò chơi Rock-Paper-Scissors</li>
+      </ul>
+
+      <h3>Precondition:</h3>
+      <ul>
+        <li>Trò chơi đang chạy và hiển thị giao diện chơi.</li>
+        <li>Người chơi đã hoàn thành ít nhất một lượt chơi.</li>
+      </ul>
+
+      <h3>Trigger:</h3>
+      <p>Người chơi chọn tùy chọn "Save & Exit" trên giao diện trò chơi.</p>
+
+      <h3>Primary Sequence:</h3>
+      <ol>
+        <li>Người chơi chọn tùy chọn "Save & Exit" trên giao diện trò chơi.</li>
+        <li>Hệ thống hiển thị một hộp thoại xác nhận với hai lựa chọn: "Thoát không lưu" và "Lưu & Thoát".</li>
+        <li>Người chơi chọn "Lưu & Thoát" để lưu kết quả trò chơi và thoát.</li>
+        <li>Hệ thống lưu kết quả trò chơi (ví dụ: điểm số) và đóng trò chơi.</li>
+      </ol>
+
+      <h3>Postcondition:</h3>
+      <ul>
+        <li>Kết quả trò chơi được lưu lại.</li>
+        <li>Trò chơi được đóng.</li>
+      </ul>
+
+      <h3>Alternate Sequence:</h3>
+      <p>Nếu người chơi chọn "Thoát không lưu" trong hộp thoại xác nhận:</p>
+      <ul>
+        <li>Hệ thống đóng hộp thoại và thoát trò chơi mà không lưu lại kết quả.</li>
+      </ul>
+
+      <h3>Nonfunctional Requirement:</h3>
+      <ul>
+        <li>Giao diện phải phản hồi ngay lập tức khi người chơi chọn tùy chọn "Save & Exit".</li>
+        <li>Hộp thoại xác nhận phải hiển thị rõ ràng và dễ dàng cho người chơi chọn lựa.</li>
+        <li>Hệ thống phải lưu kết quả trò chơi một cách chính xác và đảm bảo tính toàn vẹn.</li>
+      </ul>
+
+      <h3>Glossary:</h3>
+      <ul>
+        <li>Trò chơi Rock-Paper-Scissors: Một trò chơi cổ điển trong đó người chơi lựa chọn một trong ba tùy chọn: Kéo, Búa, Bao, và thắng dựa trên luật: Kéo thắng Búa, Búa thắng Bao, Bao thắng Kéo.</li>
+        <li>Điểm số: Số lần người chơi thắng trong trò chơi.</li>
+      </ul>
+
     </div>
   </section>
 </body>
