@@ -64,10 +64,24 @@
   </section>
 
   <section class="function-requirements">
-
+    <h2>Yêu cầu chức năng</h2>
+    <p><span class="tab"></span>Nhập số lần đi của 1 ván.</p>
+    <p><span class="tab"></span>Người chơi có thể chọn được Kéo, Búa hoặc bao ở mỗi lượt đi.</p>
+    <p><span class="tab"></span>Người chơi có thể khởi động lại trò chơi.(Đưa điểm số về lại 0, và xoá các dữ liệu từ những ván trước).</p>
+    <p><span class="tab"></span>Kết thúc mỗi lượt đi sẽ có hiện kết quả(thắng, thua hoặc hoà)</p>
+    <p><span class="tab"></span>Người chơi có thể xem điểm hiện tại của mình.</p>
+    <p><span class="tab"></span>Sau đi xong n lượt đi, sẽ hiển thị số lượt thắng và người thắng của ván đó.</p>
+    <p><span class="tab"></span>Cho phép người chơi lưu lại điểm.</p>
   </section>
 
   <section class="nonfunctional-requirements">
+    <h2>Yêu cầu phi chức năng</h2>
+    <p><span class="tab"></span>Ở mỗi lượt đi, máy sẽ không phản ứng chậm quá 3s.</p>
+    <p><span class="tab"></span>Đưa ra giao diện dễ sử dụng.(các phím, lệnh được thể hiện rõ ràng, dễ nhìn, dễ tìm kiếm)</p>
+    <p><span class="tab"></span>Máy sẽ không lưu lại dữ liệu chọn lựa của người chơi, máy không gian lận.</p>
+    <p><span class="tab"></span>Bộ đếm điểm chính xác.</p>
+    <p><span class="tab"></span>Đảm bảo thoát trò chơi có thể lưu lại dữ liệu (option cho người chơi).</p>
+
 
   </section>
 
@@ -76,11 +90,15 @@
     <div style="width: 640px; height: 480px; margin: 10px; position: relative;"><iframe allowfullscreen frameborder="0" style="width:640px; height:480px" src="https://lucid.app/documents/embedded/9c7e1f34-3a82-4d75-83ae-010b07f44683" id="auUgJ6Mds9ds"></iframe></div>
     <div class="description">
       <h3>Restart</h3>
-      <p><span class = "tab">Phím chức năng sau khi người chơi lựa chọn sẽ hiển thị ra một bản thông báo "Bạn có chắc chắn muốn restart chứ ?" gồm 2 button</span></p>
-      <ul id="choose-restart">
-        <li>Trờ về trò chơi</li>
-        <li>Đồng ý</li>
-      </ul>
+      <h3></h3>
+      <div class = "primary-step">
+        <h4><span class="tab"></span>Primary step</h4>
+        <p><span class = "tab">Phím chức năng sau khi người chơi lựa chọn sẽ hiển thị ra một bản thông báo "Bạn có chắc chắn muốn restart chứ ?" gồm 2 button</span></p>
+        <ul id="choose-restart">
+          <li>Trờ về trò chơi</li>
+          <li>Đồng ý</li>
+        </ul>
+    </div>
 
       <h3>Play</h3>
       <p><span class = "tab">Sau khi bắt đầu chơi thì một bảng thông báo hiện ra yêu cầu người chơi lựa chọn </span></p>
